@@ -1,8 +1,6 @@
 #!/bin/bash
 docker system prune
-
 docker build ./sbc_ftp_server -t sbc:ftp_server
-
 docker run \
 	--detach \
 	--env FTP_PASS=banana \
@@ -12,8 +10,8 @@ docker run \
 	--publish 40000-40019:40000-40019/tcp \
 	--health-start-period=1m \
 	--health-interval=1m \
-        --health-retries=2 \
+	--health-retries=2 \
 	--volume /data:/data \
-        --name nvr_ftp_server \
+	--name sbc_ftp_server \
 	--restart unless-stopped \
 	sbc:ftp_server
