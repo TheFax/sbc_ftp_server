@@ -25,6 +25,7 @@ tail -f /var/log/xferlog | tee /dev/stdout &
 # FAX
 mkdir -p /data
 chown -R $FTP_USER:$FTP_USER /data
+
 CONFIG_FILE=/etc/vsftpd.conf
 KEY_IP=pasv_address
 sed -i "s/\(^$KEY_IP *= *\).*/\1$LOCAL_IP/" $CONFIG_FILE
