@@ -27,7 +27,7 @@ mkdir -p /data
 chown -R $FTP_USER:$FTP_USER /data
 CONFIG_FILE=/etc/vsftpd.conf
 KEY_IP=pasv_address
-sed -c -i "s/\(^$KEY_IP *= *\).*/\1$LOCAL_IP/" $CONFIG_FILE
+sed -i "s/\(^$KEY_IP *= *\).*/\1$LOCAL_IP/" $CONFIG_FILE
 
 #/bin/sh
 /usr/sbin/vsftpd
