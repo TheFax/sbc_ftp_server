@@ -1,5 +1,12 @@
 #!/bin/sh
 
+echo "---------------------------------------"
+echo "Container enrypoint"
+echo "Configuration:"
+echo "Local IP: $LOCAL_IP"
+echo "FTP user: $FTP_USER"
+echo "---------------------------------------"
+
 addgroup \
 	-g $GID \
 	-S \
