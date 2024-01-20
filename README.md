@@ -7,7 +7,7 @@ Docker FTP server, based on [`vsftpd`](https://security.appspot.com/vsftpd.html)
  - Create a directory to use as FTP share folder:  
    ```mkdir /data```
  - Edit the ```run.sh``` file in order to personalize the configuration:  
-   ```cd sbc_ftp_server```
+   ```cd sbc_ftp_server```  
    ```nano run.sh```
  - exec the ```run.sh``` script ONCE in order to create the container and run it:  
    ```chmod u+x run.sh```  
