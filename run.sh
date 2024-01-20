@@ -1,6 +1,6 @@
 #!/bin/bash
 docker system prune
-docker build ./sbc_ftp_server -t TheFax_sbc_ftp_server:1.0
+docker build ./sbc_ftp_server --tag thefax_sbc_ftp_server:1.0
 docker run \
 	--detach \
 	--env FTP_PASS=banana \
@@ -14,4 +14,4 @@ docker run \
 	--volume /data:/data \
 	--name sbc_ftp_server \
 	--restart unless-stopped \
-	TheFax_sbc_ftp_server:1.0
+	thefax_sbc_ftp_server:1.0
