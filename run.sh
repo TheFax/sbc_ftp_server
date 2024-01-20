@@ -1,5 +1,5 @@
 #!/bin/bash
-docker system prune
+chmod u+x ./sbc_ftp_server/src/docker-entrypoint.sh
 docker build ./sbc_ftp_server --tag thefax_sbc_ftp_server:1.0
 docker run \
 	--detach \
